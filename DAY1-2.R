@@ -1,0 +1,13 @@
+age_values <- c(13, 15, 16, 16, 19, 20, 20, 21, 22, 22, 25, 25, 25, 25, 30, 33, 33, 35, 35, 35, 35, 36, 40, 45, 46, 52, 70)
+mean_age <- mean(age_values)
+median_age <- median(age_values)
+mode_age <- as.numeric(names(sort(table(age_values), decreasing = TRUE))[1])
+midrange_age <- (min(age_values) + max(age_values)) / 2
+Q1 <- quantile(age_values, 0.25)
+Q3 <- quantile(age_values, 0.75)
+print(paste("Midrange:", midrange_age))
+print(paste("First Quartile (Q1):", Q1))
+print(paste("Third Quartile (Q3):", Q3))
+print(paste("Mean:", mean_age))
+print(paste("Median:", median_age))
+print(paste("Mode:", mode_age))
